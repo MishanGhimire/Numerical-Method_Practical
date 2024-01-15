@@ -1,35 +1,47 @@
 #include <stdio.h>
 #include <math.h>
 
-#define f(x) (pow(x, 3) + x * x - 3 * x - 3)
+double f(double x)
+{
+
+    return pow(x, 3) - 4 * x - 9;
+}
 
 int main()
 {
-    float x1, x2, x0, f1, f2, f0, e;
-    int Sn = 1;
+
+    double x0, x1, x2, f0, f1, f2, e;
+    int SN = 1;
     printf("\nThis CODE IS RUN BY  MISHAN GHIMIRE\n");
-    printf("\nEnter the error criteria:");
-    scanf("%f", &e);
+    printf("Enter the error criteria (e): ");
+    scanf("%lf", &e);
 
 up:
-    printf("\nEnter two initial guesses: ");
-    scanf("%f%f", &x1, &x2);
+
+    printf("Enter two initial guesses (x1 and x2): ");
+    scanf("%lf %lf", &x1, &x2);
+
     f1 = f(x1);
     f2 = f(x2);
-    if ((f1 * f2) > 0)
+
+    if (f1 * f2 > 0)
     {
-        printf("\nWRONG Initial Guess\n");
+        printf("Wrong Initial Guesses!!\n");
         goto up;
     }
 
-    printf("\nSN\t\tx1\t\tx2\t\tx0\t\tf(x0)\n");
-    do
-    {
-        x0 = (x1 + x2) / 2;
-        f0 = f(x0);
-        printf("%d\t\t%f\t%f\t%f\t%f\n", Sn, x1, x2, x0, f0);
+    printf("S.N\t   x1\t   x2\t   x0\t   f(x0)\n");
 
-        if ((f0 * f1) < 0)
+    while (fabs(f(x0)) > e)
+    {
+
+        x0 = (x1 + x2) / 2;
+
+        f0 = f(x0);
+
+        printf("%d\t%lf\t%lf\t%lf\t%lf\n", SN, x1, x2, x0, f0);
+
+        if (f0 * f1 < 0)
         {
             x2 = x0;
             f2 = f0;
@@ -40,11 +52,10 @@ up:
             f1 = f0;
         }
 
-        Sn++;
+        SN++;
+    }
 
-    } while (fabs(f0) > e);
-
-    printf("\nRequired root = %f\n", x0);
+    printf("Required Root is: %lf\n", x0);
 
     return 0;
 }
