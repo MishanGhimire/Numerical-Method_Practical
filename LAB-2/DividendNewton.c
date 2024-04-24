@@ -1,7 +1,9 @@
 #include <stdio.h>
 
 int main() {
-    printf("This code is run by Mishan Ghimire. \n");
+    // printf("This code is run by Mishan Ghimire. \n");
+    printf("\n This code is run by Swagat kafle");
+
     float x[10], y[10], p[10];
     float k, f, n, f1 = 1, f2 = 0;
     int i, j = 1;

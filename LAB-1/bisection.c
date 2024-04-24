@@ -12,7 +12,6 @@ int main()
 
     double x0, x1, x2, f0, f1, f2, e;
     int SN = 1;
-    printf("\nThis CODE IS RUN BY  MISHAN GHIMIRE\n");
     printf("Enter the error criteria (e): ");
     scanf("%lf", &e);
 
@@ -56,6 +55,8 @@ up:
     }
 
     printf("Required Root is: %lf\n", x0);
+    printf("\nThis CODE IS RUN BY  MISHAN GHIMIRE\n");
+
 
     return 0;
 }

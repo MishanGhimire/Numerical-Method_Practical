@@ -3,7 +3,9 @@
 int main()
 {
 
-    printf("This code is run by Mishan Ghimire.\n");
+    // printf("This code is run by Mishan Ghimire.\n");
+    printf("\n This code is run by Swagat kafle");
+
 
     int n, i;
     float sumX = 0, sumX2 = 0, sumY = 0, sumXY = 0, a, b;

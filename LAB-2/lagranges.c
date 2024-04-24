@@ -2,7 +2,10 @@
 
 int main()
 {
-    printf("This code is run by Mishan Ghimire.\n");
+    // printf("This code is run by Mishan Ghimire.\n");
+    printf("\n This code is run by Swagat kafle");
+
+
     float x[100], y[100], xp, yp = 0, p;
     int i, j, n;
     // clrscr();
