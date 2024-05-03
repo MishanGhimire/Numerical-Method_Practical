@@ -6,6 +6,7 @@
 int main() {
     float x0, y0, h, xn, x, y, k1, k2, k3, k4, k;
     int n;
+    printf("This code is run by Mishan Ghimire\n");
     printf("Enter Initial Condition\n");
     printf("x0 = ");
     scanf("%f", &x0);
